@@ -12,23 +12,23 @@ void enqueue(struct Queue*, int);
 int dequeue();
 void printQueueElements(struct Queue*);
 
-int main() {
-  struct Queue *queue = create_queue(50);
+// int main() {
+//   struct Queue *queue = create_queue(50);
 
-  char operation[20]; // ENQUEUE, DEQUEUE, EXIT
-  int value;
+//   char operation[20]; // ENQUEUE, DEQUEUE, EXIT
+//   int value;
 
-  scanf("%s %d", &operation, &value);
-  while(strcmp(operation, "EXIT")) {
-    if (strcmp(operation, "ENQUEUE") == 0) {
-      enqueue(queue, value);
-    } else if (strcmp(operation, "DEQUEUE") == 0) {
-      dequeue(queue);
-    }
+//   scanf("%s %d", &operation, &value);
+//   while(strcmp(operation, "EXIT")) {
+//     if (strcmp(operation, "ENQUEUE") == 0) {
+//       enqueue(queue, value);
+//     } else if (strcmp(operation, "DEQUEUE") == 0) {
+//       dequeue(queue);
+//     }
 
-    scanf("%s %d", &operation, &value);
-  }
-}
+//     scanf("%s %d", &operation, &value);
+//   }
+// }
 
 struct Queue* create_queue(int capacity) {
   struct Queue* queue = (struct Queue*) malloc(sizeof(struct Queue));
@@ -52,12 +52,10 @@ void enqueue(struct Queue* queue, int node) {
 
   if (queue->front == -1) {
     queue->front = 0;
-    printf("queue->front = %d\n", queue->front);
-    printf("queue->rear = %d\n", queue->rear);
     fflush(stdout); 
   }
 
-  printQueueElements(queue);
+  // printQueueElements(queue);
 }
 
 int dequeue(struct Queue* queue) {
@@ -74,7 +72,7 @@ int dequeue(struct Queue* queue) {
     queue->rear = -1;
   }
 
-  printQueueElements(queue);
+  // printQueueElements(queue);
   return node;
 }
 
