@@ -40,6 +40,7 @@ int main() {
   struct Queue* queue = create_queue(50);
   enqueue(queue, n1);
 
+  printf("Binary tree in level order: ");
   while(queue->size != 0) {
     struct Node* node = dequeue(queue);
     if(node->left) enqueue(queue, node->left);
