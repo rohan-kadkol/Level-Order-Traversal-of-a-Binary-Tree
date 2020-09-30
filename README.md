@@ -5,7 +5,7 @@ This code covers how the do a level order traversal of a binary tree. To accompl
 ## Structure
 
 1. queue.c: Contains the implementation for Queue and Node
-2. level_order_traversal_of_binary_tree.c: Contains the main() that does the level order traversal of the binary tree shown in [sample_binary_tree.jpg](sample_binary_tree.jpg).
+2. level_order_traversal_of_binary_tree.c: Contains the main() that does the level order traversal of the binary tree shown in [sample_binary_tree.jpg (Below)](sample_binary_tree.jpg).
 
 <img src="sample_binary_tree.jpg">
 
