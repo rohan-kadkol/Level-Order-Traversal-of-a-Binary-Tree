@@ -9,7 +9,7 @@ struct Node {
 };
 
 struct Queue {
-  struct Node** queue;
+  struct Node** queue; // An array of pointers
   int front, rear, size, capacity;
 };
 
@@ -38,12 +38,12 @@ void printQueueElements(struct Queue*);
 // }
 
 struct Node* create_node(int value) {
-  // struct Node (5, 0x342342, 0x1987492)
-  // struct Node* 0x312312
-  // struct Node** [0x312312, 0x93492734]
+  // struct Node   = (5, 0x342342, 0x1987492)     (General format)
+  // struct Node*  = 0x312312                     (General format)
+  // struct Node** = [0x312312, 0x93492734]       (General format)
 
-  struct Node* node = (struct Node*) malloc(sizeof(struct Node)); //0x22b2cf21
-  node->value = value; // (5, 0x2342, 0x342342) = (value, 0x2342, 0x342342)
+  struct Node* node = (struct Node*) malloc(sizeof(struct Node)); //0x22b2cf21 (General format)
+  node->value = value; // (5, 0x2342, 0x342342) = (value, 0x2342, 0x342342) (General format)
   return node;
 }
 

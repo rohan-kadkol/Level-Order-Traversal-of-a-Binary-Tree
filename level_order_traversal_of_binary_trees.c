@@ -2,6 +2,8 @@
 #include "queue.c"
 
 int main() {
+  // Creating our sample binary tree
+
   struct Node* n1 = create_node(15);
   struct Node* n2 = create_node(11);
   struct Node* n3 = create_node(17);
